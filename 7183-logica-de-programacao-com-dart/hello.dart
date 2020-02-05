@@ -1,11 +1,11 @@
+
 main(){
 
-  var hello = "Hello World";
-  hello = "Outro valor";
-  hello = "Terceiro valor";
+  var num1 = 10;
+  var num2 = 2;
 
-  var numero = 2;
-  numero = 3;
-
-  print(numero);
+  var total = 2 + 2 * 5 + 2 / 2;
+  //2 + 10 + 1 = 13
+  
+  print(total);
 }
