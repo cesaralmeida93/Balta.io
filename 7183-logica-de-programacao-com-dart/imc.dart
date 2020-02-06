@@ -1,30 +1,35 @@
 import 'dart:io';
 
 main() {
-  // pegar o peso
-  // pegar a altura
-  // realizar calculo
-  // retornar imc
+  calculoImc();
+}
 
+calculoImc(){
   print("===== Digite sua altura =====");
-  var altura = double.parse((stdin.readLineSync()));
+  double altura = double.parse((stdin.readLineSync()));
 
   print("===== Digite seu peso =====");
-  var peso = double.parse((stdin.readLineSync()));
+  int peso = int.parse((stdin.readLineSync()));
 
-  var calcImc = peso / (altura * altura);
+  double imc = calcImcExpr(peso, altura);
+  imprimirResultado(imc);
+}
 
+double calcImcExpr(int peso, double altura){
+  return peso / (altura * altura);
+}
+
+imprimirResultado(imc){
   print("=================================");
-
-  if (calcImc< 18.5) {
+  if (imc< 18.5) {
     print("Abaixo do peso");
-  } else if (calcImc > 18.5 && calcImc < 24.9) {
+  } else if (imc > 18.5 && imc < 24.9) {
     print("Peso normal");
-  } else if (calcImc > 25 && calcImc < 29.9) {
+  } else if (imc > 25 && imc < 29.9) {
     print("Sobrepeso");
-  } else if (calcImc > 30 && calcImc < 34.9) {
+  } else if (imc > 30 && imc < 34.9) {
     print("Obesidade grau 1");
-  } else if (calcImc > 35 && calcImc < 39.9) {
+  } else if (imc > 35 && imc < 39.9) {
     print("Obesidade grau 2");
   } else {
     print("Obesidade grau 3");
