@@ -4,6 +4,7 @@ main() {
   calculoImc();
 }
 
+//Programa que calcula o imc
 calculoImc(){
   print("===== Digite sua altura =====");
   double altura = double.parse((stdin.readLineSync()));
@@ -14,11 +15,12 @@ calculoImc(){
   double imc = calcImcExpr(peso, altura);
   imprimirResultado(imc);
 }
-
+//Função que recebe o peso, a alura, e retorena o IMC
 double calcImcExpr(int peso, double altura){
   return peso / (altura * altura);
 }
 
+//imprime o resultado baseado no IMC passado por parâmetro
 imprimirResultado(imc){
   print("=================================");
   if (imc< 18.5) {
