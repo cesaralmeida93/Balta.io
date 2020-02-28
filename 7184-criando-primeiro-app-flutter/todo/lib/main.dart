@@ -6,7 +6,8 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Todo App',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -18,8 +19,15 @@ class App extends StatelessWidget {
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Todo List"),
+      ),
+      body: Container(
+        child: Center(
+          child: Text("Olá Mundo"),
+        ),
+      ),
     );
   }
 }
@@ -37,6 +45,3 @@ class HomePage extends StatelessWidget {
 //     );
 //   }
 // }
-
-
-
