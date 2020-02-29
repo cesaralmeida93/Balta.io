@@ -12,4 +12,10 @@ void main(List<String> arguments) {
   pessoa.peso = double.parse(stdin.readLineSync());
   print("--- Escreva sua altura");
   pessoa.altura = double.parse(stdin.readLineSync());
+
+  print("--------------------------\n");
+
+  print("Nome: ${pessoa.nome}");
+  print("IMC: ${pessoa.imc()}");
+  print("Maior de Idade: ${pessoa.maiorDeIdade()}");
 }
