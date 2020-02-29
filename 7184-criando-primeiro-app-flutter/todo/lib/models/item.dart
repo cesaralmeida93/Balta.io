@@ -9,7 +9,7 @@ class Item {
     done = json['done'];
   }
 
-  Map<Sting, dynamic> toJson() {
+  Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data['title'] = this.title;
     data['done'] = this.done;
